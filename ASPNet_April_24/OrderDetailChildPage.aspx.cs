@@ -22,13 +22,14 @@ namespace ASPNet_April_24
         
         protected void Page_Load(object sender, EventArgs e)
         {
-            lblCustomerID.Text = Request.QueryString["cID"];
+            lblCustomerID.Text = Request.QueryString["ciD"];
             lblProductID.Text = Request.QueryString["pID"];
+            lblOrderDate.Text = DateTime.Now.ToString();
             conObj = new SqlConnection(ConfigurationManager.ConnectionStrings["HRCon"].ConnectionString);
             cmdObj = new SqlCommand("select * from Product where ID=@id",conObj);
-            if (conObj2.State == ConnectionState.Closed)
+            if (conObj.State == ConnectionState.Closed)
             {
-                conObj2.Open();
+                conObj.Open();
             }
             cmdObj.Parameters.AddWithValue("@id", Request.QueryString["pID"]);
             r = cmdObj.ExecuteReader();

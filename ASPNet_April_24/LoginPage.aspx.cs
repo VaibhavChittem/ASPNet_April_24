@@ -11,16 +11,13 @@ namespace ASPNet_April_24
 {
     public partial class LoginPage : System.Web.UI.Page
     {
-        private SqlConnection conObj = null;
-        private SqlCommand cmdObj = null;
-        
+         SqlConnection conObj = null;
+         SqlCommand cmdObj = null;     
 
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
-
-
         protected void btnLogin_Click(object sender, EventArgs e)
         {
             string user = txtEmailID.Text;
@@ -33,12 +30,9 @@ namespace ASPNet_April_24
             SqlDataReader reader = cmdObj.ExecuteReader();
             if (reader.Read())
             {
-                Response.Redirect("ChildPage.aspx?cust_ID="+reader["ID"].ToString());
+                Response.Redirect("ChildPage.aspx?Cust_ID="+reader["ID"].ToString());
             }
-            //if ((txtEmailID.Text == Request.QueryString["EmailID"]) && (txtPassword.Text == Request.QueryString["Password"]))
-            //{
-                
-            //}
+            
             else
             {
                 lblErrorMessage.Text = "Email and Password are not matched";

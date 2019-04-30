@@ -20,41 +20,39 @@ namespace ASPNet_April_24
         {
             if (!IsPostBack)
             {
-                //DataSet ds = 
                     GetEmployeeData();
-                Session["User"] = Request.QueryString["ID"];
+                Session["User"]=Request.QueryString["Cust_ID"];
                 //dlProducts.DataSource = ds.Tables["Product"];
                 //dlProducts.DataBind();
             }
         }
-
         public void GetEmployeeData()
         {
             conObj = new SqlConnection(ConfigurationManager.ConnectionStrings["HRCon"].ConnectionString);
             adapter = new SqlDataAdapter("Select * from Product", conObj);
             dataSet = new DataSet();
-            adapter.Fill(dataSet, "Product");
+            adapter.Fill(dataSet,"Product");
             dlProducts.DataSource = dataSet.Tables["Product"];
             dlProducts.DataBind();
             //return dataSet;
         }
-
         protected void dlProducts_ItemCommand(object source, DataListCommandEventArgs e)
         {
-            Session["User"] = Request.QueryString["ID"];
+            Session["User"] = Request.QueryString["Cust_ID"];
             if (e.CommandName == "Details")
             {
                 Response.Redirect("DetailsChildPage.aspx?ID=" + e.CommandArgument);
             }
             else if (e.CommandName == "BuyNow")
             {
-                if (string.IsNullOrEmpty(Session["User"] as string))
+                if (Session["User"] != null)
                 {
-                    Response.Redirect("LoginPage.aspx");
+                    Response.Redirect(string.Format("OrderDetailChildPage.aspx?pID=" + e.CommandArgument + "&cid=" + Request.QueryString["Cust_ID"]));
+
                 }
                 else
                 {
-                    Response.Redirect(string.Format("OrderDetailChildPage.aspx?pID="+e.CommandArgument+ "&cid=" +Request.QueryString["ID"].ToString()));
+                    Response.Redirect("LoginPage.aspx");
                 }
 
             }

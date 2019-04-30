@@ -22,7 +22,7 @@ namespace ASPNet_April_24
             lblProductName.Text = reader["ProductName"].ToString();
             lblCategory.Text = reader["Category"].ToString();
             lblPrice.Text = reader["Price"].ToString();
-            imgDetails.ImageUrl = "Imagehandler.ashx?ID=" + Request.QueryString["ID"].ToString();
+            imgDetails.ImageUrl = "ImageHandler.ashx?ID=" + Request.QueryString["ID"].ToString();
             con.Close();
         }
     }

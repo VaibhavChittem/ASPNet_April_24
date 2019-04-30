@@ -6,7 +6,7 @@
 </asp:Content>
 
 <asp:Content ID="OrderDetail" ContentPlaceHolderID="OrderDetailContentPlaceHolder" runat="server">
-    <table>
+    <table align="center">
         <tr>
             <td>
                 <label>Order ID</label></td>
@@ -51,8 +51,11 @@
         </tr>
         <tr>
             <td>Order Date</td>
-            <td><asp:Label ID="lblOrderDate" runat="server"  Text="" ></asp:Label></td>
+            <td><asp:Label ID="lblOrderDate" runat="server"  Text="" ></asp:Label><br /></td>
+            
         </tr>
     </table>
-    <asp:Button ID="btnSave" runat="server" Text="Place Order" />
+    <div align="center">
+        <asp:Button ID="btnSave" runat="server" Text="Place Order" />
+    </div>
 </asp:Content>
