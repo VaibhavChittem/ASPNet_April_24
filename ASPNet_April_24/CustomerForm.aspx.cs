@@ -16,7 +16,7 @@ namespace ASPNet_April_24
         private SqlCommand cmdObj = null;
         protected void Page_Load(object sender, EventArgs e)
         {
-
+           
         }
 
         protected void btnSumbit_Click(object sender, EventArgs e)
@@ -32,6 +32,9 @@ namespace ASPNet_April_24
             cmdObj.Parameters.AddWithValue("@MobileNo", txtMobileNo.Text);
             cmdObj.Parameters.AddWithValue("@Address", txtAddress.Text);
 
+            //Session
+            //HttpCookie cookie = new HttpCookie(txtEmailID.Text);
+
             if (conObj.State == ConnectionState.Closed)
             {
                 conObj.Open();
@@ -40,6 +43,7 @@ namespace ASPNet_April_24
             if (result > 0)
             {
                 lblMessage.Text = "New Employee Created";
+                Response.Redirect("LoginPage?EmailID="+txtEmailID.Text+"&Password="+txtPassword.Text);
             }
             else
             {

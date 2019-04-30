@@ -11,15 +11,13 @@
     <form id="form1" runat="server">
         <div>
             <table class="align-content-center">
-                <tr >
+                <tr>
                     <td>
                         <label>Product Name</label>
                     </td>
                     <td>
                         <asp:TextBox ID="txtProductName" runat="server"></asp:TextBox>
                     </td>
-                    
-
                 </tr>
                 <tr>
                     <td>
@@ -74,11 +72,27 @@
                 </tr>
             </table>
         </div>
+        <asp:GridView ID="gvImages" runat="server" AutoGenerateColumns="false" OnRowDataBound="OnRowDataBound">
+            <Columns>
+                <asp:BoundField DataField="ID" HeaderText="Image Id" />
+                <asp:BoundField DataField="ProductName" HeaderText="Name" />
+                <asp:BoundField DataField="Category" HeaderText="Category" />
+                <asp:TemplateField HeaderText="Image">
+                    <ItemTemplate>
+                        <asp:Image ID="Image1" DataField="image1" runat="server" />
+                    </ItemTemplate>
+                </asp:TemplateField>
+            </Columns>
+        </asp:GridView>
+        <asp:Image ID="imageId" DataField="image1" runat="server" />
         <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="btnSubmit_Click" />
         <br />
         <asp:Label ID="lblMessage" runat="server" Text=""></asp:Label>
 
         <asp:Label ID="lblImage" runat="server" Text=""></asp:Label>
+
+
     </form>
+    
 </body>
 </html>

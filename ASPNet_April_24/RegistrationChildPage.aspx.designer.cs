@@ -10,16 +10,7 @@
 namespace ASPNet_April_24 {
     
     
-    public partial class CustomerForm {
-        
-        /// <summary>
-        /// form1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+    public partial class RegistrationChildPage {
         
         /// <summary>
         /// txtFirstName control.
@@ -92,6 +83,15 @@ namespace ASPNet_April_24 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSumbit;
+        
+        /// <summary>
+        /// btnReset control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnReset;
         
         /// <summary>
         /// lblMessage control.

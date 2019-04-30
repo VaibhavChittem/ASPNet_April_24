@@ -10,7 +10,7 @@
 namespace ASPNet_April_24 {
     
     
-    public partial class CustomerForm {
+    public partial class OnlineShopping {
         
         /// <summary>
         /// form1 control.
@@ -22,84 +22,75 @@ namespace ASPNet_April_24 {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// txtFirstName control.
+        /// Header control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtFirstName;
+        protected global::ASPNet_April_24.Header Header;
         
         /// <summary>
-        /// txtlastName control.
+        /// ContentPlaceHolder1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtlastName;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
         
         /// <summary>
-        /// txtEmailID control.
+        /// OrderDetailContentPlaceHolder control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEmailID;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder OrderDetailContentPlaceHolder;
         
         /// <summary>
-        /// txtPassword control.
+        /// CustomerFormContentPlaceHolder control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPassword;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder CustomerFormContentPlaceHolder;
         
         /// <summary>
-        /// dtDOB control.
+        /// LoginPageContentPlaceHolder control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox dtDOB;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder LoginPageContentPlaceHolder;
         
         /// <summary>
-        /// txtMobileNo control.
+        /// DetailsContentPlaceHolder control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMobileNo;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder DetailsContentPlaceHolder;
         
         /// <summary>
-        /// txtAddress control.
+        /// head control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAddress;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
         
         /// <summary>
-        /// btnSumbit control.
+        /// Footer control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSumbit;
-        
-        /// <summary>
-        /// lblMessage control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMessage;
+        protected global::ASPNet_April_24.Footer Footer;
     }
 }

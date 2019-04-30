@@ -1,0 +1,57 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="OnlineShopping.master.cs" Inherits="ASPNet_April_24.OnlineShopping" %>
+
+<%@ Register Src="~/Header.ascx" TagPrefix="uc1" TagName="Header" %>
+<%@ Register Src="~/Footer.ascx" TagPrefix="uc1" TagName="Footer" %>
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="Content/bootstrap-grid.css" rel="stylesheet" />
+</head>
+<body>
+
+    <form id="form1" runat="server">
+        <header>
+            <div>
+                <uc1:Header runat="server" ID="Header" />
+            </div>
+        </header>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="OrderDetailContentPlaceHolder" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+         <div>
+            <asp:ContentPlaceHolder ID="CustomerFormContentPlaceHolder" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="LoginPageContentPlaceHolder" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="DetailsContentPlaceHolder" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <div>
+            <asp:ContentPlaceHolder ID="head" runat="server">
+            </asp:ContentPlaceHolder>
+            
+        </div>
+        <footer class="page-footer font-small blue pt-0">
+            <div class="footer">
+                <uc1:Footer runat="server" ID="Footer" />
+            </div>
+        </footer>
+
+    </form>
+</body>
+</html>
