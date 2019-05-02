@@ -11,7 +11,28 @@ namespace ASPNet_April_24
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["User"] != null)
+            {
+                btnSignIn.Text = "SignOut";
+            }
+            else
+            {
+                btnSignIn.Text = "SignIn";
+            }
+        }
 
+        protected void btnSignIn_Click(object sender, EventArgs e)
+        {
+            if (btnSignIn.Text == "SignIn")
+            {
+                Response.Redirect("Login.aspx");
+            }
+            else
+            {
+                btnSignIn.Text = "SignOut";
+                Session.Clear();
+                Response.Redirect("ChildPage.aspx");
+            }
         }
     }
 }

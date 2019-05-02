@@ -37,6 +37,7 @@ namespace ASPNet_April_24
             {
                 lblErrorMessage.Text = "Email and Password are not matched";
             }
+            conObj.Close();
 
         }
     }

@@ -48,8 +48,7 @@ namespace ASPNet_April_24
                 if (Session["User"] != null)
                 {
                     Response.Redirect(string.Format("OrderDetailChildPage.aspx?pID=" + e.CommandArgument + "&cid=" + Request.QueryString["Cust_ID"]));
-
-                }
+                 }
                 else
                 {
                     Response.Redirect("LoginPage.aspx");

@@ -56,6 +56,9 @@
         </tr>
     </table>
     <div align="center">
-        <asp:Button ID="btnSave" runat="server" Text="Place Order" />
+        <asp:Button ID="btnSave" runat="server" Text="Place Order" OnClick="btnSave_Click" />
+    </div>
+    <div>
+        <asp:Label ID="lblMessageForOrderDetail" runat="server" Text=""></asp:Label>
     </div>
 </asp:Content>
